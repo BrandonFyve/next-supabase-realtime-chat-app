@@ -1,3 +1,4 @@
+import React from "react";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
@@ -14,3 +15,5 @@ const useSupabase = () => {
 
   return { session, supabase };
 };
+
+export default useSupabase;
