@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Auth from "../components/Auth";
+import Chat from "../components/Chat";
 
 export default function Home({ session, supabase }) {
   const [loggedIn, setLoggedIn] = React.useState(false);
@@ -17,7 +18,7 @@ export default function Home({ session, supabase }) {
       </Head>
 
       <main className={styles.main}>
-        {loggedIn ? <span>Logged in</span> : <Auth supabase={supabase} />}
+        {loggedIn ? <Chat supabase={supabase} /> : <Auth supabase={supabase} />}
       </main>
     </div>
   );
